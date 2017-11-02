@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body class="font-smoothing">
+
+    {% include header.html %}
+
+    <main class="post-content mb-5 mb-lg-7" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {% include offcanvas.html %}
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

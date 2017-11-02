@@ -1,0 +1,13 @@
+<div id="offcanvas" uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            {% for link in site.data.navigation %} {% if link.url contains 'http' %} {% assign domain = '' %} {% else %} {% assign domain = site.url %} {% endif %}
+            <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" {% endif %}>{{ link.title }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>

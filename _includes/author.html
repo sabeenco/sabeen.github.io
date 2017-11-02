@@ -1,0 +1,16 @@
+<div class="tm-author-box uk-text-large">
+  <a href="{{ site.baseurl }}/"><img class="uk-responsive-width uk-margin-bottom" src="/assets/img/ivan.jpg"></a>
+  {% if site.description %}
+    <p class="text-muted mt-5 mb-4">{{ site.description }}</p>
+  {% endif %}
+
+  <a target="_blank" href="https://themeforest.net/user/pressapps/portfolio"><span uk-icon="icon: arrow-right"></span> Products on Envato</a>
+  <br>
+  {% if site.github_username %}
+    <a target="_blank" href="https://github.com/{{ site.github_username }}"><span uk-icon="icon: arrow-right"></span> Projects on Github</a>
+  {% endif %}
+  <br>
+  {% if site.twitter_username %}
+    <a target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><span uk-icon="icon: arrow-right"></span> Connect on Twitter</a>
+  {% endif %}
+</div>

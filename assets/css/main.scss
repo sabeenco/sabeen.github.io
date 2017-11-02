@@ -1,0 +1,243 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// 1. Your custom variables and variable overwrites.
+//$global-link-color: #DA7D02;
+$global-secondary-background: #020202;
+$global-link-color: #f0506e;
+$global-link-hover-color: #f0506e;
+// $global-success-background: #32d296 !default;
+// $global-warning-background: #faa05a !default;
+// $global-danger-background: #f0506e !default;
+//$base-code-font-size: 16px;
+
+$tm-letter-spacing-m: 1px;
+$tm-letter-spacing-l: 2px;
+
+$base-body-font-family: 'Playfair Display', serif; //'Lora', serif;
+$base-heading-font-family: 'Playfair Display', serif;
+$navbar-nav-item-font-family: 'Nunito Sans', sans-serif;
+$logo-font-family: 'Playfair Display', serif;
+
+$base-heading-font-weight: 400;
+$base-heading-color: $global-secondary-background;
+$heading-hero-font-size:                         3rem;
+$heading-hero-font-size-s:                       4.4rem;
+$heading-hero-font-size-m:                       6.6rem;
+
+//$heading-hero-line-height:                       1.1;
+//$heading-hero-line-height-s:                     1;
+//$heading-hero-line-height-m:                     0.88;
+
+
+//$base-h1-font-size: 8rem; // h1
+$base-h2-font-size: 4.4rem; // h2
+//$base-h3-font-size: 3rem; // h3
+//$base-h4-font-size: 2.6rem; // h4
+//$base-h5-font-size: 2.1rem;
+$base-blockquote-font-size: 1.7rem;
+//$base-body-color: #000;
+//$card-title-font-size: 2rem;
+//$base-h1-font-size: $global-xxlarge-font-size !default;
+//$base-h1-line-height: 1.2 !default;
+//$global-xlarge-font-size: 2rem !default;
+//$base-h2-font-size: $global-xlarge-font-size !default;
+//$base-h2-line-height: 1.3 !default;
+//$text-large-font-size: 1.4rem;
+//$base-h3-font-size: $global-large-font-size !default;
+//$base-h3-line-height: 1.4 !default;
+//$base-h4-font-size: $base-h4-font-size !default;
+//$base-h4-line-height: 1.4 !default;
+//$base-h5-font-size: $global-font-size !default;
+//$base-h5-line-height: 1.4 !default;
+//$base-h6-font-size: $global-small-font-size !default;
+//$base-h6-line-height: 1.4 !default;
+
+// Article
+// $article-margin-top: $global-large-margin !default;
+// $global-xxlarge-font-size: 2.625rem !default;
+//$article-title-font-size: ;
+$article-title-line-height: 1.1;
+// $global-small-font-size: 0.875rem !default;
+// $article-meta-font-size: $global-small-font-size !default;
+// $article-meta-line-height: 1.4 !default;
+// $global-muted-color: #999 !default;
+// $article-meta-color: $global-muted-color !default;
+
+//$global-large-gutter: 90px;
+//$navbar-nav-item-height: 100px;
+$inverse-navbar-nav-item-color: rgba(255, 255, 255, 0.6);
+
+//$inverse-global-muted-color:                     rgba($global-inverse-color, 0.9);
+/*
+$text-muted-color:                               $global-muted-color !default;
+$text-primary-color:                             $global-primary-background !default;
+$text-success-color:                             $global-success-background !default;
+$text-warning-color:                             $global-warning-background !default;
+$text-danger-color:
+*/
+// 2. Import default variables and available mixins.
+@import "uikit/variables-theme";
+@import "uikit/mixins-theme";
+
+
+// 3. Your custom mixin overwrites.
+//@mixin hook-card() { color: #000; }
+@mixin hook-button-large(){
+    letter-spacing: $tm-letter-spacing-m;
+    font-size: 1.3rem;
+    line-height: 64px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+}
+@mixin hook-text-lead(){
+    letter-spacing: $tm-letter-spacing-l;
+}
+@mixin hook-base-heading(){
+    letter-spacing: $tm-letter-spacing-l;
+}
+@mixin hook-card-title(){
+    letter-spacing: $tm-letter-spacing-m;
+}
+
+// 4. Import UIkit.
+@import "uikit/uikit-theme";
+
+@import "instashow";
+@import "syntax-highlighting";
+
+.font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.uk-background-blend-overlay {
+    background-color: rgba(2, 2, 2, 0.4);
+}
+.tm-hero-subtitle {
+    font-size: 2.2rem;
+}
+.uk-logo {
+    //font-weight: 500;
+    //font-size: 28px;
+    letter-spacing: $tm-letter-spacing-l;
+    color: $global-inverse-color !important;
+}
+
+.uk-navbar-nav li a, .uk-navbar-item a {
+    letter-spacing: $tm-letter-spacing-l;
+    font-weight: 700;
+}
+.uk-navbar-container .tm-button-default {
+    color: rgba(255,255,255,0.6) !important;
+    border-color: rgba(255,255,255,0.6) !important;
+    &:hover {
+        color: rgba(255,255,255,1) !important;
+        border-color: rgba(255,255,255,1) !important;
+    }
+}
+.tm-letter-spacing-l {
+    letter-spacing: $tm-letter-spacing-l;
+}
+.tm-contact {
+    .uk-card-title {
+        font-size: 2rem;
+    }
+    textarea {
+        height: 150px;
+    }
+}
+.vcard {
+    .tel, .email {
+        &:hover {
+            text-decoration: none;
+            color: $global-secondary-background;
+        }
+    }
+    .tm-tel {
+        font-size: 3rem;
+    }
+    .tm-email {
+        font-size: 1.6rem;
+    }
+}
+/*
+
+
+
+.tm-text-xlarge {
+    font-family: $base-heading-font-family;
+    font-size: $base-h5-font-size;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: $global-inverse-color;
+    p {
+        margin-bottom: $global-medium-margin;
+    }
+
+}
+@media (min-width: $breakpoint-small) {
+    .tm-text-xlarge {
+        font-size: $base-h4-font-size;
+    }
+}
+.tm-heading-hero-l {
+    margin-left: -0.9rem;
+    span {
+        display: block;
+    }
+}
+.tm-section-about {
+    a {
+        color: $global-link-color!important;
+        &:hover {
+            color: $global-link-color;
+        }
+    }
+    h2 {
+        //font-size: $global-xxlarge-font-size;
+    }
+}
+.tm-author-img {
+    background-position: 100% 93%;
+}
+footer {
+    .tm-social-links {
+        h3 {
+            //font-size: 2.2rem;
+        }
+    }
+}
+.uk-article {
+    font-size: $text-large-font-size;
+    line-height: 1.7;
+    h1, h2 {
+        font-weight: 800;
+    }
+    h2 {
+        font-size: $base-h3-font-size;
+    }
+    .uk-article-title a:hover {
+        color: $global-secondary-background;
+        text-decoration: none;
+    }
+    img {
+        margin-top: $margin-medium-margin;
+        margin-bottom: $margin-medium-margin;
+    }
+}
+@media (min-width: $breakpoint-medium) {
+    .uk-article h1.uk-article-title {
+        font-size: 6.6rem;
+        margin-bottom: $margin-xlarge-margin;
+    }
+    .uk-article h2.uk-article-title {
+        font-size: 3.8rem;
+    }
+}
+.tm-author-box {
+    line-height: 1.8;
+}
+*/

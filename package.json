@@ -1,0 +1,27 @@
+{
+  "name": "jekyll-uikit",
+  "version": "1.0.0",
+  "description": "*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy": "ncp node_modules/uikit/src/scss/ _sass/uikit/ & ncp node_modules/uikit/dist/js/uikit.min.js assets/js/uikit.min.js & ncp node_modules/uikit/dist/js/uikit-icons.min.js assets/js/uikit-icons.min.js",
+    "postinstall": "npm run copy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanchromjak/jekyll-uikit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivanchromjak/jekyll-uikit/issues"
+  },
+  "homepage": "https://github.com/ivanchromjak/jekyll-uikit#readme",
+  "dependencies": {
+    "uikit": "^3.0.0-beta.31"
+    },
+    "devDependencies": {
+      "ncp": "latest"
+    }
+}

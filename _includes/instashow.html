@@ -1,0 +1,34 @@
+<div class="uk-section uk-section-large uk-background-secondary uk-light">
+    <div class="uk-container uk-container-small uk-text-center">
+        <h2 class="uk-margin-small-bottom">Dream Weddings</h2>
+        <p class="uk-text-lead uk-text-uppercase uk-margin-large-bottom">Dream Wedding by Shahida has created events at the most exclusive venues</p>
+    </div>
+    <div class="uk-container uk-margin-large-top-">
+        {% if site.instagram_accesstoken %}
+            <div data-is
+                 data-is-access-token="{{ site.instagram_accesstoken }}"
+                 data-is-source=""
+                 data-is-limit="20"
+                 data-is-width="auto"
+                 data-is-height="auto"
+                 data-is-columns="4"
+                 data-is-rows="2"
+                 data-is-gutter="30"
+                 data-is-responsive="%7B%22640%22%3A%7B%22columns%22%3A%221%22%2C%22rows%22%3A%222%22%2C%22gutter%22%3A%2230%22%7D%2C%22960%22%3A%7B%22columns%22%3A%223%22%2C%22rows%22%3A%222%22%2C%22gutter%22%3A%2230%22%7D%7D"
+                 data-is-drag-control="false"
+                 data-is-scrollbar="false"
+                 data-is-loop="false"
+                 data-is-info="likesCounter, description"
+                 data-is-popup-info="username, instagramLink, likesCounter, description"
+                 data-is-color-gallery-overlay="rgba(240, 80, 110, 0.78)"
+                 data-is-color-popup-username-hover="rgb(197, 42, 71)"
+                 data-is-color-popup-instagram-link="rgb(240, 80, 110)"
+                 data-is-color-popup-instagram-link-hover="rgb(197, 42, 71)"
+                 data-is-color-popup-anchor="rgb(240, 80, 110)"
+                 data-is-color-popup-anchor-hover="rgb(197, 42, 71)"
+                 data-is-color-gallery-arrows="rgb(240, 80, 110)"
+                 data-is-color-gallery-arrows-hover="rgb(197, 42, 71)">
+            </div>
+        {% endif %}
+    </div>
+</div>
