@@ -1,34 +1,26 @@
-<div id="gallery" class="uk-section uk-section-large uk-background-secondary uk-light">
-    <div class="uk-container uk-container-small uk-text-center">
-        <h2 class="uk-margin-small-bottom">Gallery</h2>
-        <p class="uk-text-lead uk-text-uppercase uk-margin-large-bottom">Sabben has been making the world beautiful one girl at a time</p>
+{% if site.instagram_accesstoken %}
+    <div data-is
+         data-is-access-token="{{ site.instagram_accesstoken }}"
+         data-is-source=""
+         data-is-limit="20"
+         data-is-width="auto"
+         data-is-height="auto"
+         data-is-columns="4"
+         data-is-rows="2"
+         data-is-gutter="0"
+         data-is-responsive="%7B%22640%22%3A%7B%22columns%22%3A%221%22%2C%22rows%22%3A%222%22%2C%22gutter%22%3A%2230%22%7D%2C%22960%22%3A%7B%22columns%22%3A%223%22%2C%22rows%22%3A%222%22%2C%22gutter%22%3A%2200%22%7D%7D"
+         data-is-drag-control="false"
+         data-is-scrollbar="false"
+         data-is-loop="false"
+         data-is-info="likesCounter, description"
+         data-is-popup-info="username, instagramLink, likesCounter, description"
+         data-is-color-gallery-overlay="rgba(198, 164, 90, 0.95)"
+         data-is-color-popup-username-hover="#a98945"
+         data-is-color-popup-instagram-link="#c6a45a"
+         data-is-color-popup-instagram-link-hover="#a98945"
+         data-is-color-popup-anchor="#c6a45a"
+         data-is-color-popup-anchor-hover="#a98945"
+         data-is-color-gallery-arrows="#a98945"
+         data-is-color-gallery-arrows-hover="#a98945">
     </div>
-    <div class="uk-container uk-margin-large-top-">
-        {% if site.instagram_accesstoken %}
-            <div data-is
-                 data-is-access-token="{{ site.instagram_accesstoken }}"
-                 data-is-source=""
-                 data-is-limit="20"
-                 data-is-width="auto"
-                 data-is-height="auto"
-                 data-is-columns="4"
-                 data-is-rows="2"
-                 data-is-gutter="30"
-                 data-is-responsive="%7B%22640%22%3A%7B%22columns%22%3A%221%22%2C%22rows%22%3A%222%22%2C%22gutter%22%3A%2230%22%7D%2C%22960%22%3A%7B%22columns%22%3A%223%22%2C%22rows%22%3A%222%22%2C%22gutter%22%3A%2230%22%7D%7D"
-                 data-is-drag-control="false"
-                 data-is-scrollbar="false"
-                 data-is-loop="false"
-                 data-is-info="likesCounter, description"
-                 data-is-popup-info="username, instagramLink, likesCounter, description"
-                 data-is-color-gallery-overlay="rgba(198, 164, 90, 0.95)"
-                 data-is-color-popup-username-hover="#a98945"
-                 data-is-color-popup-instagram-link="#c6a45a"
-                 data-is-color-popup-instagram-link-hover="#a98945"
-                 data-is-color-popup-anchor="#c6a45a"
-                 data-is-color-popup-anchor-hover="#a98945"
-                 data-is-color-gallery-arrows="#a98945"
-                 data-is-color-gallery-arrows-hover="#a98945">
-            </div>
-        {% endif %}
-    </div>
-</div>
+{% endif %}

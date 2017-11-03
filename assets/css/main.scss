@@ -246,7 +246,13 @@ main {
 
 }
 
-
+// Instashow counter color fix
+.instashow-popup-container em {
+    color: rgb(109, 109, 109);
+}
+.instashow-gallery-media-info-counter em {
+    color: #fff;
+}
 
 /*
 
