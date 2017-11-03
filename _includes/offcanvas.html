@@ -3,10 +3,11 @@
 
         <button class="uk-offcanvas-close" type="button" uk-close></button>
 
-        <ul class="uk-nav uk-nav-default">
+        <ul class="uk-nav uk-nav-default uk-text-center">
             {% for link in site.data.navigation %} {% if link.url contains 'http' %} {% assign domain = '' %} {% else %} {% assign domain = site.url %} {% endif %}
             <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" {% endif %}>{{ link.title }}</a></li>
             {% endfor %}
+            <div class="uk-navbar-item"><a href="{{ domain }}{{ link.url }}/#contact" class="uk-button tm-button-primary">Book Now</a></div>
         </ul>
 
     </div>

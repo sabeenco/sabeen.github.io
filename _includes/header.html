@@ -1,9 +1,9 @@
-<header class="uk-section-secondary" uk-sticky="animation: uk-animation-slide-top; top: 300" role="banner">
-    <nav class="uk-navbar-container uk-navbar-transparent">
+<header class="" uk-sticky="animation: uk-animation-slide-top; top: 300; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-section-secondary; cls-inactive: uk-navbar-transparent;" role="banner">
+    <nav class="uk-navbar-container uk-light">
         <div class="uk-container">
             <div uk-navbar>
                 <div class="uk-navbar-left">
-                    <a class="uk-navbar-item uk-logo" href="{{ "/" | relative_url }}">SHAHIDA</a>
+                    <a class="uk-navbar-item uk-logo" href="{{ "/" | relative_url }}">SABEEN</a>
                 </div>
                 <div class="uk-navbar-right">
                     <ul class="uk-navbar-nav uk-visible@m">
@@ -23,7 +23,7 @@
                             {% endif %}
                         {% endfor %}
                     </ul>
-                    <div class="uk-navbar-item uk-visible@m"><a href="{{ "/rentals/" | relative_url }}" class="uk-button uk-button-default tm-button-default">Rentals</a></div>
+                    <div class="uk-navbar-item uk-visible@m"><a href="#contact" class="uk-button tm-button-primary" uk-scroll="duration: 500">Book Now</a></div>
                     <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" uk-navbar-toggle-icon uk-toggle></a>
                 </div>
             </div>

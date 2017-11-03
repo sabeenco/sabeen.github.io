@@ -3,36 +3,44 @@
 ---
 
 // 1. Your custom variables and variable overwrites.
-//$global-link-color: #DA7D02;
+$global-link-color: #c1962d;
+$global-primary-background: #c6a45a;
 $global-secondary-background: #020202;
-$global-link-color: #f0506e;
-$global-link-hover-color: #f0506e;
+$global-link-hover-color: #020202;
 // $global-success-background: #32d296 !default;
 // $global-warning-background: #faa05a !default;
 // $global-danger-background: #f0506e !default;
 //$base-code-font-size: 16px;
-
+//$inverse-global-color:             red;
+$inverse-global-muted-color:          rgba(255, 255, 255, 0.9);
+//$inverse-global-inverse-color:  red;
+//$inverse-link-muted-color: $inverse-global-muted-color !default;
+$inverse-link-muted-hover-color: $global-primary-background;
+//$inverse-link-text-hover-color: $inverse-global-muted-color !default;
+$base-link-hover-text-decoration: none;
 $tm-letter-spacing-m: 1px;
 $tm-letter-spacing-l: 2px;
 
-$base-body-font-family: 'Playfair Display', serif; //'Lora', serif;
-$base-heading-font-family: 'Playfair Display', serif;
-$navbar-nav-item-font-family: 'Nunito Sans', sans-serif;
-$logo-font-family: 'Playfair Display', serif;
+$base-body-font-family: 'Montserrat', sans-serif; //'Lora', serif;
+$base-heading-font-family: 'Montserrat', sans-serif;
+$navbar-nav-item-font-family: 'Montserrat', sans-serif;
+$logo-font-family: 'Montserrat', sans-serif;
 
-$base-heading-font-weight: 400;
+
+$base-heading-font-weight: 600;
 $base-heading-color: $global-secondary-background;
-$heading-hero-font-size:                         3rem;
-$heading-hero-font-size-s:                       4.4rem;
-$heading-hero-font-size-m:                       6.6rem;
+$heading-hero-font-size:                         4rem;
+$heading-hero-font-size-s:                       6rem;
+$heading-hero-font-size-m:                       10rem;
+
+$global-control-large-height: 64px;
 
 //$heading-hero-line-height:                       1.1;
 //$heading-hero-line-height-s:                     1;
 //$heading-hero-line-height-m:                     0.88;
 
-
 //$base-h1-font-size: 8rem; // h1
-$base-h2-font-size: 4.4rem; // h2
+$base-h2-font-size: 3.6rem; // h2
 //$base-h3-font-size: 3rem; // h3
 //$base-h4-font-size: 2.6rem; // h4
 //$base-h5-font-size: 2.1rem;
@@ -67,8 +75,8 @@ $article-title-line-height: 1.1;
 
 //$global-large-gutter: 90px;
 //$navbar-nav-item-height: 100px;
-$inverse-navbar-nav-item-color: rgba(255, 255, 255, 0.6);
-
+$inverse-navbar-nav-item-color: rgba(255, 255, 255, 1);
+$inverse-text-muted-color: $inverse-global-muted-color;
 //$inverse-global-muted-color:                     rgba($global-inverse-color, 0.9);
 /*
 $text-muted-color:                               $global-muted-color !default;
@@ -83,24 +91,50 @@ $text-danger-color:
 
 
 // 3. Your custom mixin overwrites.
-//@mixin hook-card() { color: #000; }
-@mixin hook-button-large(){
-    letter-spacing: $tm-letter-spacing-m;
-    font-size: 1.3rem;
-    line-height: 64px;
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 500;
-}
-@mixin hook-text-lead(){
-    letter-spacing: $tm-letter-spacing-l;
-}
+
+// Headings
+// ========================================================================
+
 @mixin hook-base-heading(){
-    letter-spacing: $tm-letter-spacing-l;
-}
-@mixin hook-card-title(){
     letter-spacing: $tm-letter-spacing-m;
 }
 
+@mixin hook-base-h1(){
+
+}
+
+@mixin hook-base-h2(){
+
+}
+
+@mixin hook-base-h3(){
+
+}
+
+// @mixin hook-base-h4(){}
+
+// @mixin hook-base-h5(){}
+
+// @mixin hook-base-h6(){}
+
+
+@mixin hook-button-large(){
+    letter-spacing: $tm-letter-spacing-m;
+    font-size: 1.3rem;
+    //line-height: 64px;
+    //font-weight: 500;
+    //border-radius: 50px;
+}
+@mixin hook-text-lead(){
+    //letter-spacing: $tm-letter-spacing-m;
+}
+
+@mixin hook-card(){
+    //letter-spacing: $tm-letter-spacing-m;
+    border-radius: 6px;
+}
+$card-default-color: $global-emphasis-color;
+$form-background: rgba(255, 255, 255, 0.5);
 // 4. Import UIkit.
 @import "uikit/uikit-theme";
 
@@ -112,41 +146,55 @@ $text-danger-color:
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
-
+main {
+    margin-top: -$navbar-nav-item-height;
+}
 .uk-background-blend-overlay {
-    background-color: rgba(2, 2, 2, 0.4);
+    background-color: rgba(2, 2, 2, 0.6);
 }
 .tm-hero-subtitle {
     font-size: 2.2rem;
+    font-weight: 300;
+    //color: rgba(255,255,255,0.8) !important;
 }
 .uk-logo {
     //font-weight: 500;
     //font-size: 28px;
     letter-spacing: $tm-letter-spacing-l;
-    color: $global-inverse-color !important;
+    color: $global-primary-background !important;
 }
-
+.uk-navbar-container.uk-section-secondary {
+    background-color: $global-secondary-background;
+}
 .uk-navbar-nav li a, .uk-navbar-item a {
     letter-spacing: $tm-letter-spacing-l;
-    font-weight: 700;
+    font-weight: 500;
 }
-.uk-navbar-container .tm-button-default {
-    color: rgba(255,255,255,0.6) !important;
-    border-color: rgba(255,255,255,0.6) !important;
+.uk-navbar-item .tm-button-primary {
+    color: #fff !important;
+    background-color: $global-primary-background;
+    border-radius: 20px;
     &:hover {
-        color: rgba(255,255,255,1) !important;
-        border-color: rgba(255,255,255,1) !important;
+        background-color: darken($global-primary-background, 10%);
     }
 }
 .tm-letter-spacing-l {
     letter-spacing: $tm-letter-spacing-l;
 }
+.tm-border-rounded {
+    border-radius: 50px;
+}
 .tm-contact {
-    .uk-card-title {
-        font-size: 2rem;
+    h3 {
+        font-size: 2.2rem;
     }
     textarea {
         height: 150px;
+        border-radius: 20px;
+    }
+    label {
+        font-size: 1.4rem;
+        //text-align: left;
     }
 }
 .vcard {
@@ -156,13 +204,50 @@ $text-danger-color:
             color: $global-secondary-background;
         }
     }
+    .tm-tel, .tm-email {
+        color: $global-secondary-background;
+    }
     .tm-tel {
-        font-size: 3rem;
+        font-size: 2.2rem;
+        font-weight: $base-heading-font-weight;
     }
     .tm-email {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 }
+
+/* Phone landscape and bigger */
+@media (min-width: $breakpoint-small) {
+    h2, .uk-h2 {
+        font-size: 4.6rem;
+    }
+    h3, .uk-h3 {
+        //font-size: 1rem;
+    }
+    .vcard .tm-tel {
+        font-size: 3rem;
+    }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: $breakpoint-medium) {
+    h2, .uk-h2 {
+        font-size: 6.6rem;
+    }
+    h3, .uk-h3 {
+        //font-size: 1rem;
+    }
+}
+
+/* Desktop and bigger */
+@media (min-width: $breakpoint-large) {
+
+
+
+}
+
+
+
 /*
 
 

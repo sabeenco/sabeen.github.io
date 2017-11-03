@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Cherish Your Life Moments
-subtitle: Shahida Dream Weddings
+title: Beautiful You
+subtitle: Let's Bring Out The
 permalink: /
 ---

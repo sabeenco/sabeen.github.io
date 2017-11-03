@@ -6,13 +6,12 @@
   <title>{% if page.title and page.layout != 'home' %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <link rel="shortcut icon" type="image/png" href="{{ "assets/img/favicon.png" | relative_url }}" >
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Scheherazade|Nunito+Sans:600,700,800|Lora" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   <script src="{{ "/assets/js/uikit.min.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/uikit-icons.min.js" | relative_url }}"></script>
-  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.runtime.min.js"></script>
   <script src="/assets/js/jquery.instashow.min.js"></script>
