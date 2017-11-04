@@ -2,19 +2,11 @@
 layout: default
 ---
 
-<div class="uk-section uk-section-secondary">
-    <div class="uk-container">
-
-        <div class="uk-grid-large uk-flex-middle" uk-grid>
-            <div class="uk-width-expand@m">
-                <h1 class="uk-heading-hero tm-heading-hero-l">{{ page.title | escape }}</h1>
-            </div>
-            <div class="uk-width-auto@m">
-                <div class="uk-light tm-text-xlarge">{{ content }}</div>
-            </div>
+<div class="uk-section uk-section-xlarge uk-background-blend-overlay uk-background-secondary uk-light uk-background-cover uk-background-center-center" style="background-image: url(../assets/img/hero.jpg);">
+    <div class="uk-container uk-container-small uk-text-center">
+        <div>
+            {% if page.subtitle %}<h3 class="uk-text-uppercase uk-text-muted tm-hero-subtitle">{{ page.subtitle | escape }}</h3>{% endif %}
+            <h1 class="uk-heading-hero uk-margin-xlarge-bottom-">{{ page.title | escape }}</h1>
         </div>
-
     </div>
 </div>
-
-{% include contact.html %}
