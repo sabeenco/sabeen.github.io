@@ -196,6 +196,9 @@ main {
         font-size: 1.4rem;
         //text-align: left;
     }
+    input[type="submit" i]{
+        -webkit-appearance:none;
+    }
 }
 .vcard {
     .tel, .email {
@@ -253,82 +256,3 @@ main {
 .instashow-gallery-media-info-counter em {
     color: #fff;
 }
-
-/*
-
-
-
-.tm-text-xlarge {
-    font-family: $base-heading-font-family;
-    font-size: $base-h5-font-size;
-    font-weight: 700;
-    letter-spacing: -1px;
-    color: $global-inverse-color;
-    p {
-        margin-bottom: $global-medium-margin;
-    }
-
-}
-@media (min-width: $breakpoint-small) {
-    .tm-text-xlarge {
-        font-size: $base-h4-font-size;
-    }
-}
-.tm-heading-hero-l {
-    margin-left: -0.9rem;
-    span {
-        display: block;
-    }
-}
-.tm-section-about {
-    a {
-        color: $global-link-color!important;
-        &:hover {
-            color: $global-link-color;
-        }
-    }
-    h2 {
-        //font-size: $global-xxlarge-font-size;
-    }
-}
-.tm-author-img {
-    background-position: 100% 93%;
-}
-footer {
-    .tm-social-links {
-        h3 {
-            //font-size: 2.2rem;
-        }
-    }
-}
-.uk-article {
-    font-size: $text-large-font-size;
-    line-height: 1.7;
-    h1, h2 {
-        font-weight: 800;
-    }
-    h2 {
-        font-size: $base-h3-font-size;
-    }
-    .uk-article-title a:hover {
-        color: $global-secondary-background;
-        text-decoration: none;
-    }
-    img {
-        margin-top: $margin-medium-margin;
-        margin-bottom: $margin-medium-margin;
-    }
-}
-@media (min-width: $breakpoint-medium) {
-    .uk-article h1.uk-article-title {
-        font-size: 6.6rem;
-        margin-bottom: $margin-xlarge-margin;
-    }
-    .uk-article h2.uk-article-title {
-        font-size: 3.8rem;
-    }
-}
-.tm-author-box {
-    line-height: 1.8;
-}
-*/
